@@ -78,3 +78,19 @@ del(engtr["book"]) #o veriyi siler
 print(engtr)
 
 print(len(engtr))
+
+#2-dimen
+dicA = {"a1" : [1,2,3,4], "a2" : [[0,1],[3,4]]}
+print(dicA["a1"])
+print(dicA["a1"][1])
+print(dicA["a2"][0])
+print(dicA["a2"][0][1])
+
+#keys and values of set dictionary
+dicB = {"one" : 1, "two" : 2, "three" : 3}
+print(dicB.keys())
+print(dicB.values())
+print(dicB.items())
+
+for i,j in dicB.items():
+    print(i,j)

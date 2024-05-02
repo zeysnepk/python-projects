@@ -30,5 +30,6 @@ tupleTwo = ("Zey",)
 print(tupleTwo)
 print(type(tupleTwo))
 
-
-
+#count fonk
+nums = (1,1,1,2,3,3,3,4)
+print(nums.count(1))
