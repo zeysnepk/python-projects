@@ -60,4 +60,7 @@ print(sehirler)
 sehirler.reverse()
 print(sehirler)
 
-              
+#list in list
+list = [[1,2],[3,7],[4,6,7]]
+print(list[1])
+print(list[1][1])
