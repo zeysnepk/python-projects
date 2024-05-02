@@ -53,4 +53,7 @@ else:
 
 print("\nThe biggest number is",maxNum,"\nThe smallest number is",minNum)
 
-
+#bool
+bool(0) #False
+bool(1) #True
+bool(13) #True 
