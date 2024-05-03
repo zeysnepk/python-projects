@@ -25,7 +25,7 @@ for i in numArm:
 if numArm_sum == int(numArm):
     print("Number",numArm,"is a Armstrong number")
 else:
-    print("Number",numArm,"is a not Armstrong number")
+    print("Number",numArm,"is not a Armstrong number")
 
 
 #example of list comprehension
