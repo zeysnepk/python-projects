@@ -35,3 +35,18 @@ listA = list(range(1,101))
 listB = [i for i in listA if i % 2 == 0]
 print(listB)
 
+#finding the prime number
+numPrime = int(input("Enter a number: "))
+boolx = 1
+
+for i in range(2,numPrime):
+    if numPrime % i == 0 and numPrime != 2:
+        print("Number",numPrime,"is not a prime number")
+        boolx = 0
+        break
+
+if boolx == 1:
+    print("Number",numPrime,"is a prime number")
+
+
+
