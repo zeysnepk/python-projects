@@ -29,5 +29,22 @@ for i in range(starLen):
         print("*", end = (" "))
     print("")
 
+#twoloop
+nums = ((1,2),(3,4),(5,6),(7,8))
+
+for i,j in nums:
+    print("i: {} j: {}".format(i,j))
+
+#for in dictionaries
+diction = {"one" : 1, "two" : 2, "three" : 3} 
+
+for i in diction:
+    print(i) #prints just keys
+
+for i in diction.values():
+    print(i) #prints values
+
+for i, j in diction.items():
+    print("Key : {}  Value : {}".format(i,j)) #prints keys and values
 
 
