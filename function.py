@@ -94,5 +94,6 @@ print(b)
 multipTwo = lambda x : x *2 #creates a function on a single line
 print(multipTwo(5)) 
 
+
 reverse = lambda s : s[::-1] #reverses string
 print(reverse("Zeynep"))

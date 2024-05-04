@@ -22,7 +22,7 @@ while True:
         factorial *= i
 
     print("Factorial of number",fac_value,"is",factorial)  
-     
+ 
 
     
 
