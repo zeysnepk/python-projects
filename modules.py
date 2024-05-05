@@ -22,8 +22,7 @@ print(floor(6.4))
 
 #get desired functions from modules
 
-from math import floor,cell
-
+from math import floor,ceil
 
 
 
