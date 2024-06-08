@@ -91,7 +91,7 @@ print(b)
 
 #Lambda Function
 
-multipTwo = lambda x : x *2 #creates a function on a single line
+multipTwo = lambda x : x * 2 #creates a function on a single line
 print(multipTwo(5)) 
 
 
