@@ -86,6 +86,48 @@ class TV():
         
         return "TV Status : {}\nTV Volume : {}\nChannel List: {}\nCurrent Channel : {}\n".format(self.TV_status,self.TV_sound,self.channel_list,self.channel)
         
+        
+    def ChangeChannel(self):
+        
+        while True:
+            key = input("To go next channel --> '+'\nTo go previous channel --> '-'\nTo quit --> 'q'\n")
+            
+            if key == '+':
+                print("Switching to the next channel...")
+                time.sleep(1)
+                
+                ChannelIndex = self.channel_list.index(self.channel)
+                
+                if ChannelIndex < len(TVzey) -1:
+                    ChannelIndex += 1
+                    self.channel = self.channel_list[ChannelIndex]
+                    
+                    print("Current Channel : ",self.channel)
+                
+                else:
+                    print("!End of the channels!")
+                    
+            elif key == '-':
+                print("Switching to the previous channel...")
+                time.sleep(1)
+                
+                ChannelIndex = self.channel_list.index(self.channel)
+                
+                if ChannelIndex > 0:
+                    ChannelIndex -= 1
+                    self.channel = self.channel_list[ChannelIndex]
+                    
+                    print("Current Channel : ",self.channel)
+                
+                else:
+                    print("!Head of the channels!")
+                    
+            elif key == 'q':
+                break
+            
+            else:
+                print("Invalid Input Try Again!")
+
 TVzey = TV()       
     
 print(
@@ -104,7 +146,9 @@ TELEVISION PROGRAM
 
 6 --> RANDOM CHANNEL
 
-7 --> TV INFORMATIONS
+7 --> SWITCH CHANNEL
+
+8 --> TV INFORMATIONS
 
 ! Press 'q' to quit !
     
@@ -143,6 +187,9 @@ while True:
         TVzey.PassRandomChannel()
         
     elif op == '7':
+        TVzey.ChangeChannel()
+        
+    elif op == '8':
         print(TVzey)
         
     else:
