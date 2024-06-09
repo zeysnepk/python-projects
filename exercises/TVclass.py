@@ -128,7 +128,7 @@ class TV():
             else:
                 print("Invalid Input Try Again!")
 
-TVzey = TV()       
+TVzey = TV()
     
 print(
 """
