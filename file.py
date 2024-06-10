@@ -43,3 +43,51 @@ listFile = file7.readlines()
 print(listFile)
 file7.close()
 
+#Closing files automatically "with open() as" function 
+with open("trial.txt","r") as file8:
+    for i in file8:
+        print(i)
+        
+#Reading files where you want with seek() and tell() functions
+with open("trial.txt","r") as file9:
+    print(file9.tell())  #tells where is in the file in bytes
+    file9.seek(5)        #goes to the fifth byte
+    print(file9.read(6)) #reads 6 values
+    
+
+with open("trial.txt","r+") as file10:   #Opening a file with r+ mode it writes and reads
+    file10.seek(3)
+    file10.write("\nIs it this") #writes it starting from 3rd position
+    file10.seek(0)
+    print(file10.read())   
+    
+
+#Make changes at the end of the file
+with open("trial.txt","r+") as file11:
+    file11.read()
+with open("trial.txt","a") as file11: 
+    file11.write("ENDING\n")
+with open("trial.txt","r+") as file11:
+    print(file11.read())
+    
+#Make changes at the beginning of the file
+with open("trial.txt","r+") as file12:
+    content = file12.read()
+    content = "BEGINNING\n" + content
+    print(content)
+    file12.seek(0)
+    file12.write(content)
+    file12.seek(0)
+    print(file12.read())
+    
+#Make changes where you want in the list with lines
+with open("trial.txt","r+") as file13:
+    listTrial = file13.readlines()
+    listTrial.insert(2,"second line\n")
+    file13.seek(0)
+    for i in listTrial:  #or writelines()
+        file13.write(i)
+    file13.seek(0)
+    print(file13.read()) 
+    
+    
