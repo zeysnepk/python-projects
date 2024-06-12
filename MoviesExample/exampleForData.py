@@ -14,6 +14,9 @@ def addAmovie():
     genreOfMovie = input("Genre : ")
     minuteOfMovie = int(input("Duration(minute) : "))
     
+    print("Adding Book...")
+    time.sleep(1)
+    
     cursor.execute("INSERT INTO moviesIveWatched Values(?,?,?,?)",(nameOfMovie,directorOfMovie,genreOfMovie,minuteOfMovie))
     con.commit()
     
