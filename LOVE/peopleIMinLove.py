@@ -14,7 +14,7 @@ class people():
         
     def __str__(self):
         
-        return "Name : {}\nSurname : {}\nGender : {}\nAge : {}\nScore : {}\n".format(self.name,self.surname,self.gender,self.age,self.score)
+        return "\nName : {}\nSurname : {}\nGender : {}\nAge : {}\nScore : {}\n".format(self.name,self.surname,self.gender,self.age,self.score)
     
 
 class listOfPeople():

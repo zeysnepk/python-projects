@@ -64,6 +64,8 @@ while True:
     elif key == '3':
         nameToDelete = input("Enter the name of person u want to delete : ")
         
+        copyname = nameToDelete
+        
         nameToDelete = listPeople.searchPeople(nameToDelete)
         
         if nameToDelete != "nobody":
@@ -76,7 +78,7 @@ while True:
                     print("Deleting",nameToDelete,"from your heart and list...")
                     time.sleep(1)
             
-                    listPeople.deletePeople(nameToDelete)
+                    listPeople.deletePeople(copyname)
             
                     print("Deleted :(")
                     break
