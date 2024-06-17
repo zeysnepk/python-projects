@@ -29,6 +29,8 @@ class Window(QtWidgets.QWidget): #self = QtWidgets.QWidget
         
         self.button.clicked.connect(self.click)
          
+        self.setWindowTitle("PYQT5.7")
+        
         self.show()
         
     def click(self):

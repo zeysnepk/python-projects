@@ -25,7 +25,9 @@ class Window(QtWidgets.QWidget):
         self.setLayout(v_box)   
         
         self.clean.clicked.connect(self.click)   
-        self.print.clicked.connect(self.click)  
+        self.print.clicked.connect(self.click) 
+        
+        self.setWindowTitle("PYQT5.8") 
         
         self.show()
         
