@@ -38,7 +38,6 @@ class Window(QtWidgets.QWidget):
         self.open_button.clicked.connect(self.open)
         self.save_button.clicked.connect(self.save)
         
-        self.show()
         
     def clear(self):
         
@@ -58,10 +57,69 @@ class Window(QtWidgets.QWidget):
         with open (file_path[0], "w") as file:
             file.write(self.text.toPlainText())
 
+
+class Menu(QtWidgets.QMainWindow):
+    
+    def __init__(self):
         
+        super().__init__()
+        
+        self.window = Window()
+        self.setCentralWidget(self.window)
+        
+        self.createMenu()
+        
+    def createMenu(self):
+        
+        menubar = self.menuBar()
+        menubar.setNativeMenuBar(False)
+        
+        file_menu = menubar.addMenu("File")
+        edit_menu = menubar.addMenu("Edit")
+        
+        open_file = QtWidgets.QAction("Open", self)
+        open_file.setShortcut("Ctrl+O")
+        
+        save_file = QtWidgets.QAction("Save", self)
+        save_file.setShortcut("Ctrl+S")
+        
+        exitApp = QtWidgets.QAction("Exit", self)
+        exitApp.setShortcut("Ctrl+Q")
+        
+        file_menu.addAction(open_file)
+        file_menu.addAction(save_file)
+        file_menu.addAction(exitApp)
+        
+        clear = QtWidgets.QAction("Clear", self)
+        clear.setShortcut("Ctrl+D")
+        
+        edit_menu.addAction(clear)
+        
+        file_menu.triggered.connect(self.fileClick)
+        edit_menu.triggered.connect(self.editClick)
+        
+        self.show()
+        
+    def fileClick(self, action):
+        
+        if action.text() == "Open":
+            self.window.open()
+            
+        elif action.text() == "Save":
+            self.window.save()
+            
+        elif action.text() == "Exit":
+            QtWidgets.qApp.quit()
+            
+    def editClick(self, action):
+        
+        if action.text() == "Clear":
+            self.window.clear()
+        
+    
 
 app = QtWidgets.QApplication(sys.argv)
 
-window = Window()
+menu = Menu()
 
 sys.exit(app.exec_())
