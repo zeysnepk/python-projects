@@ -4,7 +4,6 @@ from PyQt5.QtGui import QPainter, QPixmap
 from PyQt5.QtCore import QTimer
 
 
-
 class Window(QMainWindow):
     
     def __init__(self):
