@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QPixmap
 from PyQt5.QtCore import QTimer
+import pictures_rc
 
 
 class Window(QMainWindow):
@@ -33,14 +34,13 @@ class Window(QMainWindow):
         self.setGeometry(10,200,1810,800)
         self.setWindowTitle("Walking Girl")
         self.colorCount
+        self.setStyleSheet("border-image: url(:/background/background.jpeg)")
         
     def paintEvent(self, event):
         
         qp = QPainter()
-        image_background = QPixmap("./background.jpeg")
-        image = QPixmap("./girl.png")
+        image = QPixmap(":/girl/girl.png")
         qp.begin(self)
-        qp.drawPixmap(self.rect(), image_background)
         qp.drawPixmap(self.x, 300, image.width(), image.height(), image)
         qp.end()
         
