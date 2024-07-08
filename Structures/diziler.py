@@ -12,7 +12,7 @@ print(ogrenciler)
 #dizileri listeleme
 sehirler = list(("Ankara","Istanbul"))
 print(sehirler)
-print(len(sehirler))
+print(len(sehirler)) 
 
 #diziyi silme
 print(sehirler.clear())

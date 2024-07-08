@@ -22,7 +22,7 @@ class Window(QMainWindow):
     def paintEvent(self ,e): #a ready-made method that rewards every time when the window changes
         self.i += 1 
         self.setWindowTitle(str(self.i))
-        qp = QPainter()
+        qp = QPainter() #QPAINTER is a class that draws in a widget
         qp.begin(self)
         qp.setPen(QColor(255,255,255)) #White RGB color code
         qp.setBrush(QColor(255,182,193)) #Light Pink RGB color code
