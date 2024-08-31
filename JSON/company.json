@@ -1,0 +1,127 @@
+{
+    "company": {
+      "name": "TechCorp Inc.",
+      "establishedYear": 1995,
+      "employees": [
+        {
+          "id": 1,
+          "firstName": "Ali",
+          "lastName": "Veli",
+          "position": "Software Developer",
+          "department": "R&D",
+          "dateOfBirth": "1988-05-12",
+          "email": "ali.veli@techcorp.com",
+          "phone": "+90 212 456 78 90",
+          "address": {
+            "street": "Tech Street",
+            "number": "42",
+            "city": "Istanbul",
+            "postalCode": "34000"
+          },
+          "project": {
+            "name": "AI Project",
+            "budget": 1500000.00,
+            "startDate": "2024-01-15",
+            "endDate": "2024-12-31",
+            "phases": [
+              {
+                "phase": 1,
+                "name": "Research",
+                "completionDate": "2024-03-31"
+              },
+              {
+                "phase": 2,
+                "name": "Development",
+                "completionDate": "2024-09-30"
+              },
+              {
+                "phase": 3,
+                "name": "Testing",
+                "completionDate": "2024-12-15"
+              }
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "firstName": "Ayşe",
+          "lastName": "Kara",
+          "position": "Marketing Manager",
+          "department": "Marketing",
+          "dateOfBirth": "1990-11-23",
+          "email": "ayse.kara@techcorp.com",
+          "phone": "+90 212 987 65 43",
+          "address": {
+            "street": "Marketing Road",
+            "number": "7B",
+            "city": "Istanbul",
+            "postalCode": "34100"
+          }
+        }
+      ],
+      "clients": [
+        {
+          "id": 1,
+          "name": "Client A",
+          "company": "Company A",
+          "email": "client.a@companya.com",
+          "orders": [
+            {
+              "orderNumber": "O12345",
+              "date": "2024-07-01",
+              "amount": 5000.00,
+              "products": [
+                {
+                  "productNumber": "P101",
+                  "name": "Laptop",
+                  "quantity": 2
+                },
+                {
+                  "productNumber": "P102",
+                  "name": "Mouse",
+                  "quantity": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "warehouses": [
+        {
+          "id": "W1",
+          "location": "Istanbul",
+          "capacity": 10000,
+          "stock": [
+            {
+              "productNumber": "P101",
+              "name": "Laptop",
+              "quantity": 150
+            },
+            {
+              "productNumber": "P102",
+              "name": "Mouse",
+              "quantity": 500
+            }
+          ]
+        },
+        {
+          "id": "W2",
+          "location": "Ankara",
+          "capacity": 8000,
+          "stock": [
+            {
+              "productNumber": "P101",
+              "name": "Laptop",
+              "quantity": 75
+            },
+            {
+              "productNumber": "P102",
+              "name": "Mouse",
+              "quantity": 200
+            }
+          ]
+        }
+      ]
+    }
+  }
+  

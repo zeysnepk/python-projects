@@ -18,7 +18,7 @@ authotOfBook = input("Author : ")
 publisherOfBook = input("Publisher : ")
 numbersOfBookspage = int(input("Numbers of Pages : "))
 
-cursor.execute("INSERT OR IGNORE INTO firstable Values(?,?,?,?)",(nameOfBook,authotOfBook,publisherOfBook,numbersOfBookspage))
+cursor.execute("INSERT INTO firstable Values(?,?,?,?)",(nameOfBook,authotOfBook,publisherOfBook,numbersOfBookspage))
 con.commit()
 
 
