@@ -1,0 +1,3 @@
+([('animation_girl',
+   '/Users/zeynepkaplan/Desktop/Projects/PythonProjects/PYQT5/animation/dist/animation_girl',
+   'EXECUTABLE')],)
